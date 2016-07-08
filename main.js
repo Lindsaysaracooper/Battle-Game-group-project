@@ -1,4 +1,4 @@
-var $home = $("<header><h1>Love Vs The Earth</h1><h2>Select a User</h2></header><div class=\"characters_select\"><div class=\"easy\"><img id =\"easy_character\"src=\"#\" alt=\"Easy_Character\" /><p>User - Easy Mode</p></div><div class=\"hard\"><img id =\"hard_character\" src=\"#\" alt=\"hard_character\" /><p>User - Hard Mode</p></div></div>");
+var $home = $("<div class =\"homedesign\"><header><h1>Love Vs The Earth</h1><h2>Select a User</h2></header><div class=\"characters_select\"><div class=\"easy\"><img id =\"easy_character\"src=\"#\" alt=\"Easy_Character\" /><p>User - Easy Mode</p></div><div class=\"hard\"><img id =\"hard_character\" src=\"#\" alt=\"hard_character\" /><p>User - Hard Mode</p></div></div></div>");
 
 var $welcome = $("<div class=\"welcome\"><h1 id =\"namePrompt\"></h1><p>Enter copy about the game.</p><button id =\"beginButton\" type=\"button\" name=\"button\">Begin</button><button id =\"homeButton\"type=\"button\" name=\"button\">Back Home</button></div>");
 
