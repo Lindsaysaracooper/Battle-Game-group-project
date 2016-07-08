@@ -1,3 +1,16 @@
-header{
-  color:red;
+// @font-face {
+//     font-family: myFirstFont;
+//     src: url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+// }
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+// home page stylings
+.wrapper{
+background:url("http://cf067b.medialib.glogster.com/media/78/78a7c2f73b5427ebe08f25df587e79d7b9b2ff6bbc62867af29faafd7069ad64/0110-0902-1214-0208-bunch-cartoon-flowers-with-happy-faces.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+height:120vh;
+margin-top: -20px;
+opacity:.3;
+font-family: 'Roboto Condensed', sans-serif;
+
 }
