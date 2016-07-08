@@ -8,6 +8,25 @@ var $result = $("<div class=\"result\"><p>An alert about who won.</p></div><div 
 
 var username;
 
+function PlayerConstructor (points1, message1, points2, message2, points3, message3) {
+  this.actions = [
+    {
+      pointVal: points1,
+      str: message1
+    },
+    {
+      pointVal: points2,
+      str: message2
+    },
+    {
+      pointVal: points3,
+      str: message3
+    }
+  ];
+}
+
+var earth = new PlayerConstructor (-2, 'You were robbed!', -4, 'You got a flat tire!', -6, 'You missed your flight and are now stuck in the terminal for 5 hours!');
+
 function renderHome() {
     $(".wrapper").empty();
     $(".wrapper").append($home);
@@ -39,8 +58,6 @@ function renderHome() {
 
 $(document).ready(function() {
 
-
     renderHome();
-
 
 });
