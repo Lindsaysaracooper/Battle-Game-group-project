@@ -12,27 +12,23 @@ var username;
 var player;
 var love = 0;
 
-function PlayerConstructor (points1, message1, points2, message2, points3, message3) {
-  this.actions = [
-    {
-      pointVal: points1,
-      str: message1
-    },
-    {
-      pointVal: points2,
-      str: message2
-    },
-    {
-      pointVal: points3,
-      str: message3
-    }
-  ];
+function PlayerConstructor(points1, message1, points2, message2, points3, message3) {
+    this.actions = [{
+        pointVal: points1,
+        str: message1
+    }, {
+        pointVal: points2,
+        str: message2
+    }, {
+        pointVal: points3,
+        str: message3
+    }];
 }
 
-var earth = new PlayerConstructor (-1, 'You were robbed!', -2, 'You got a flat tire!', -3, 'You missed your flight and are now stuck in the terminal for 5 hours!');
+var earth = new PlayerConstructor(-1, 'You were robbed!', -2, 'You got a flat tire!', -3, 'You missed your flight and are now stuck in the terminal for 5 hours!');
 
-PlayerConstructor.prototype.getIndex = function () {
-  return Math.floor(Math.random() * this.actions.length);
+PlayerConstructor.prototype.getIndex = function() {
+    return Math.floor(Math.random() * this.actions.length);
 };
 
 function renderHome() {
@@ -40,49 +36,47 @@ function renderHome() {
     $(".wrapper").append($home);
 
     $("img").on('click', function() {
-      var imgSrc;
+        var imgSrc;
 
         if (this.alt === 'Easy_Character') {
-          player = new PlayerConstructor (2, 'You hugged a stranger!', 4, 'You planted a tree!', 6, 'You lent an empathetic ear!');
-          imgSrc = 'http://www.clipartbest.com/cliparts/dT8/ojg/dT8ojgLxc.png';
-        }
-        else {
-          player = new PlayerConstructor (2, 'You fed the hungry!', 3, 'You planned a 5k for local charity!', 4, 'You adopted an orphan!');
-          imgSrc = 'http://img13.deviantart.net/cb85/i/2011/126/d/5/hippie_mom_by_ydocnameloc-d3frct2.png';
+            player = new PlayerConstructor(2, 'You hugged a stranger!', 4, 'You planted a tree!', 6, 'You lent an empathetic ear!');
+            imgSrc = 'http://www.clipartbest.com/cliparts/dT8/ojg/dT8ojgLxc.png';
+        } else {
+            player = new PlayerConstructor(2, 'You fed the hungry!', 3, 'You planned a 5k for local charity!', 4, 'You adopted an orphan!');
+            imgSrc = 'http://img13.deviantart.net/cb85/i/2011/126/d/5/hippie_mom_by_ydocnameloc-d3frct2.png';
         }
         // render the easy character page
         username = prompt("Hello peace-maker. What is your name?");
         $(".wrapper").empty();
         $(".wrapper").append($welcome);
         $("#namePrompt").text("Greetings " + username + ", You are our only chance to save the world from negativity.");
-        $("#homeButton").on('click',renderHome);
+        $("#homeButton").on('click', renderHome);
 
         $("#beginButton").on('click', function() {
             $(".wrapper").empty();
             $(".wrapper").append($battle);
             $('#user-image').attr('src', imgSrc);
             $('#computer-icon').attr('src', 'assets/images/earth.png');
-            $('#go_button').on('click', function () {
-              var playerIndex = player.getIndex();
-              var earthIndex = earth.getIndex();
-              love += player.actions[playerIndex].pointVal + earth.actions[earthIndex].pointVal;
-              console.log(love);
-              if (love >= 10 || love <= -10) {
-                $(".wrapper").empty();
-                $(".wrapper").append($result);
-                if (love > 0) {
-                  $('h1').text('You won!');
+            $('#go_button').on('click', function() {
+                var playerIndex = player.getIndex();
+                var earthIndex = earth.getIndex();
+                love += player.actions[playerIndex].pointVal + earth.actions[earthIndex].pointVal;
+                console.log(love);
+                if (love >= 10 || love <= -10) {
+                    $(".wrapper").empty();
+                    $(".wrapper").append($result);
+                    if (love > 0) {
+                        $('h1').text('You won!');
+                    } else {
+                        $('h1').text('You lost!');
+                    }
+                    $("#homeButton").on('click', renderHome);
                 }
-                else {
-                  $('h1').text('You lost!');
-                }
-                $("#homeButton").on('click',renderHome);
-              }
             });
-            $("#homeButton").on('click',renderHome);
+            $("#homeButton").on('click', renderHome);
 
 
-    });
+        });
     });
 }
 
