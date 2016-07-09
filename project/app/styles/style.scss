@@ -1,16 +1,42 @@
-// @font-face {
-//     font-family: myFirstFont;
-//     src: url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
-// }
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
 // home page stylings
 .wrapper{
-background:url("http://cf067b.medialib.glogster.com/media/78/78a7c2f73b5427ebe08f25df587e79d7b9b2ff6bbc62867af29faafd7069ad64/0110-0902-1214-0208-bunch-cartoon-flowers-with-happy-faces.jpg");
-background-repeat: no-repeat;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("http://cf067b.medialib.glogster.com/media/78/78a7c2f73b5427ebe08f25df587e79d7b9b2ff6bbc62867af29faafd7069ad64/0110-0902-1214-0208-bunch-cartoon-flowers-with-happy-faces.jpg");
 background-size: cover;
 height:120vh;
 margin-top: -20px;
-opacity:.3;
-font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Lobster', cursive;
 
+}
+
+header{
+  text-align: center;
+font-size: 2rem;
+}
+
+header h1{
+  color:#FE5AED;
+  font-size: 5rem;
+
+}
+
+.easy_character{
+    margin-left: 20%;
+}
+.easy{
+  display: inline-block;
+  width:50%;
+}
+.hard{
+  display: inline-block;
+  width:50%;
+}
+
+.easy img {
+  width:30%;
+}
+
+.hard img {
+  width:30%;
+  height:40vh;
 }
