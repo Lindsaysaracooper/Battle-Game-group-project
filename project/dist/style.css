@@ -12,14 +12,15 @@
 header h1 {
   color: #FE5AED;
   font-size: 5rem;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: -25px; }
 
 header h2 {
   font-size: 3rem;
   text-align: center; }
 
 .characters_select {
-  margin-left: 25%; }
+  margin-left: 30%; }
 
 .easy {
   display: inline-block;
@@ -29,23 +30,26 @@ header h2 {
   display: inline-block;
   width: 40%; }
 
-#user-icons img {
-  width: 30%; }
+#user-icons img, #computer_icons_all img {
+  width: 27%;
+  border: black solid 2px;
+  height: 13vh;
+  margin-right: 3%; }
 
 .user img {
-  width: 285px; }
+  width: 270px; }
 
 .easy p {
   position: relative;
   bottom: 47vh;
-  right: 92%;
+  right: 106%;
   font-size: 1.3rem;
   display: inline; }
 
 .hard p {
   position: relative;
   bottom: 47vh;
-  left: 8%;
+  left: 16%;
   font-size: 1.3rem;
   display: inline; }
 
@@ -83,17 +87,20 @@ header h2 {
   font-size: 5rem;
   text-align: center; }
 
-.user {
+.battle .user {
   display: inline-block;
   width: 30%;
   position: relative;
-  bottom: 20vh;
-  float: left; }
+  bottom: 16vh;
+  float: left;
+  margin-left: 2%; }
 
-.computer {
+.battle .computer {
   display: inline-block;
   width: 30%;
-  float: left; }
+  float: left;
+  position: relative;
+  bottom: 9vh; }
 
 .arena {
   width: 30%;
@@ -109,5 +116,16 @@ header h2 {
 
 .battle_icon_user {
   display: inline-block; }
+
+#go_button {
+  background-color: #FE5AED;
+  padding: 9px 30px;
+  font-size: 2.3rem;
+  margin-left: 8%; }
+
+#computer_icons_all {
+  position: relative;
+  top: 14vh;
+  left: 13%; }
 
 /*# sourceMappingURL=style.css.map */
