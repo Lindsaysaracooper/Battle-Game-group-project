@@ -1,35 +1,81 @@
-@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url("https://fonts.googleapis.com/css?family=Bangers");
+@import url("https://fonts.googleapis.com/css?family=Bangers|Pathway+Gothic+One|Quattrocento+Sans");
+@import url("hover-min.css");
 .wrapper {
   background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("http://cf067b.medialib.glogster.com/media/78/78a7c2f73b5427ebe08f25df587e79d7b9b2ff6bbc62867af29faafd7069ad64/0110-0902-1214-0208-bunch-cartoon-flowers-with-happy-faces.jpg");
   background-size: cover;
   height: 120vh;
-  margin-top: -20px;
-  font-family: 'Lobster', cursive; }
-
-header {
-  text-align: center;
-  font-size: 2rem; }
+  width: 100%;
+  font-family: 'Bangers', cursive;
+  position: absolute; }
 
 header h1 {
   color: #FE5AED;
-  font-size: 5rem; }
+  font-size: 5rem;
+  text-align: center; }
 
-.easy_character {
-  margin-left: 20%; }
+header h2 {
+  font-size: 3rem;
+  text-align: center; }
+
+.characters_select {
+  margin-left: 25%; }
 
 .easy {
   display: inline-block;
-  width: 50%; }
+  width: 40%; }
 
 .hard {
   display: inline-block;
-  width: 50%; }
+  width: 40%; }
 
 .easy img {
-  width: 30%; }
+  width: 60%; }
 
 .hard img {
-  width: 30%;
-  height: 40vh; }
+  width: 58%; }
+
+.easy p {
+  position: relative;
+  bottom: 47vh;
+  right: 92%;
+  font-size: 1.3rem;
+  display: inline; }
+
+.hard p {
+  position: relative;
+  bottom: 47vh;
+  left: 8%;
+  font-size: 1.3rem;
+  display: inline; }
+
+.hvr-grow:hover {
+  transform: scale(1.1); }
+
+.welcome h1 {
+  font-size: 3em;
+  text-align: center;
+  margin: 2vh 16%; }
+
+.welcome p {
+  font-size: 2.5rem;
+  text-align: center; }
+
+.welcome ol {
+  font-family: 'Pathway Gothic One', sans-serif;
+  margin: 0 28%;
+  font-size: 1.5rem; }
+
+#beginButton {
+  background-color: #FE5AED;
+  padding: 9px 30px;
+  font-size: 2.3rem;
+  margin-left: 31%; }
+
+#homeButton {
+  background-color: #FE5AED;
+  padding: 9px 30px;
+  font-size: 2.3rem;
+  margin-left: 8%; }
 
 /*# sourceMappingURL=style.css.map */
