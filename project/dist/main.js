@@ -1,6 +1,6 @@
-var $home = $("<header><h1>Love Vs The Earth</h1><h2>Select a User</h2></header><div class=\"characters_select\"><div class=\"easy\"><img id =\"easy_character\"src=\"#\" alt=\"Easy_Character\" /><p>User - Easy Mode</p></div><div class=\"hard\"><img id =\"hard_character\" src=\"#\" alt=\"hard_character\" /><p>User - Hard Mode</p></div></div>");
+var $home = $("<div class =\"homedesign\"><header><h1>Love Vs The Earth</h1><h2>Select a User</h2></header><div class=\"characters_select\"><div class=\"easy hvr-grow\"><img id =\"easy_character\"src=\"http://www.clipartbest.com/cliparts/dT8/ojg/dT8ojgLxc.png\" alt=\"Easy_Character\" /><p>Easy Mode</p></div><div class=\"hard  hvr-grow\"><img id =\"hard_character\" src=\"http://img13.deviantart.net/cb85/i/2011/126/d/5/hippie_mom_by_ydocnameloc-d3frct2.png\" alt=\"hard_character\" /><p>Hard Mode</p></div></div></div>");
 
-var $welcome = $("<div class=\"welcome\"><h1 id =\"namePrompt\"></h1><p>Enter copy about the game.</p><button id =\"beginButton\" type=\"button\" name=\"button\">Begin</button><button id =\"homeButton\"type=\"button\" name=\"button\">Back Home</button></div>");
+var $welcome = $("<div class=\"welcome\"><h1 id =\"namePrompt\"></h1><p>This is a game of chance.</p><ol><li>You will be given a set of positive actions.</li><li>Select an action and send it out to the earth.  </li><li>The action is randomly assigned a value. If your action is greater then the value of the earth’s action, you win that round.</li><li>If the earth’s action has more value, the earth wins that round and subtracts that value from the total.</li><li>To save the world you must get 10 positivity points.</li><li>You lose if you let the earth get to negative 10 points.</li><li>Good luck and may the goodwill of men (and women) be with you. </li></ol></p><button class=\"hvr-grow\"id =\"beginButton\" type=\"button\" name=\"button\">Begin</button><button class=\"hvr-grow\" id =\"homeButton\"type=\"button\" name=\"button\">Back Home</button></div>");
 
 var $battle = $("<div class=\"battle\"><div class=\"user\"><img src=\"#\" alt=\"user\" /></div><div class=\"battle_icon\"><img src=\"#\" alt=\"user_icon\" /><img src=\"#\"alt=\"computer_icon\"/></div><div class=\"computer\"><img src=\"#\"><p>number of points</p></div><p>Copy about the result of the play.</p><button id=\"go_button\" type=\"button\"name=\"button\">Go</button><button id =\"homeButton\"type=\"button\" name=\"button\">Back Home</button><button id =\"placeholder\"></button></div>");
 
@@ -46,10 +46,10 @@ function renderHome() {
           player = new PlayerConstructor (2, 'You fed the hungry!', 3, 'You planned a 5k for local charity!', 4, 'You adopted an orphan!');
         }
         // render the easy character page
-        username = prompt("Hello Superhero! What is your name?");
+        username = prompt("Hello peace-maker. What is your name?");
         $(".wrapper").empty();
         $(".wrapper").append($welcome);
-        $("#namePrompt").text("Greetings " + username + "You are our only chance!");
+        $("#namePrompt").text("Greetings " + username + ", You are our only chance to save the world from negativity.");
         $("#homeButton").on('click',renderHome);
 
         $("#beginButton").on('click', function() {
