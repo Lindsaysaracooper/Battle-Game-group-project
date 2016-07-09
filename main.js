@@ -4,7 +4,7 @@ var $welcome = $("<div class=\"welcome\"><h1 id =\"namePrompt\"></h1><p>This is 
 
 var $battle = $("<div class=\"battle\"><h1>Battle</h1><div class=\"user\"><img src=\"http://www.clipartbest.com/cliparts/dT8/ojg/dT8ojgLxc.png\" id = \"user-image\" alt=\"user\" /><div class=\"battle_icon_user\" id = \"user-icons\"><img src=\"http://cliparting.com/wp-content/uploads/2016/05/Tree-clipart-2.png\" /><img src=\"http://previews.123rf.com/images/lenm/lenm1204/lenm120400031/13131936-Illustration-of-a-Smiley-Offering-Hugs-and-Kisses-Stock-Illustration-kiss.jpg\"/><img src=\"http://www.iconsplace.com/icons/preview/blue/listen-256.png\"/></div></div><div class=\"arena\"><p>Points</p></div><div class=\"computer\"><img src=\"http://www.villa-ilona.eu/.cm4all/iproc.php/globe-308335_1280.png/downsize_1280_0/globe-308335_1280.png\" id = \"computer-icon\"><div id=\"computer_icons_all\"class=\"computer_icon_battle\"><img src=\"https://cdn3.iconfinder.com/data/icons/glypho-signs/64/user-waiting-room-512.png\" /><img src=\"https://cdn4.iconfinder.com/data/icons/automotive-maintenance/100/automotive-flat-tire-22-512.png\"/><img src=\"https://fancyladydoctor.files.wordpress.com/2015/04/thief-512.png\"/></div></div></div><p>Copy about the result of the play.</p><button id=\"go_button\" type=\"button\"name=\"button\">Go</button><button id =\"homeButton\"type=\"button\" name=\"button\">Back Home</button><button id =\"placeholder\"></button></div>");
 
-var $result = $("<div class=\"result\"><p>An alert about who won.</p></div><div class=\"end\"><h1>Copy about \"you win\" or \"you lose\"</h1><img src=\"#\" alt=\"earth\" /><button type=\"button\" id =\"homeButton\" name=\"button\">Play Again</button></div>");
+var $result = $("<div class=\"end\"><h1>Copy about \"you win\" or \"you lose\"</h1><img id=\"earth-image\" src=\"#\" alt=\"earth\" /><button type=\"button\" id =\"homeButton\" name=\"button\">Play Again</button></div>");
 
 var $scoreboard = $("<div class='scoreboard'></div>");
 
@@ -74,6 +74,7 @@ function renderHome() {
                 if (love >= 10 || love <= -10) {
                     $(".wrapper").empty();
                     $(".wrapper").append($result);
+                    $('.end').children('img').attr('src', 'http://www.villa-ilona.eu/.cm4all/iproc.php/globe-308335_1280.png/downsize_1280_0/globe-308335_1280.png');
                     if (love > 0) {
                         $('h1').text('You won!');
                     } else {
