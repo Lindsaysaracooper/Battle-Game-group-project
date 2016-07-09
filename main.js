@@ -6,6 +6,8 @@ var $battle = $("<div class=\"battle\"><h1>Battle</h1><div class=\"user\"><img s
 
 var $result = $("<div class=\"result\"><p>An alert about who won.</p></div><div class=\"end\"><h1>Copy about \"you win\" or \"you lose\"</h1><img src=\"#\" alt=\"earth\" /><button type=\"button\" id =\"homeButton\" name=\"button\">Play Again</button></div>");
 
+var $scoreboard = $("<div class='scoreboard'></div>");
+
 var username;
 var player;
 var love = 0;
@@ -45,21 +47,30 @@ function renderHome() {
         }
         // render the easy character page
         username = prompt("Hello peace-maker. What is your name?");
+        if (username === null || username === "") {
+          alert('You must tell us your name!');
+          $(".wrapper").empty();
+          renderHome();
+        } else {
         $(".wrapper").empty();
         $(".wrapper").append($welcome);
         $("#namePrompt").text("Greetings " + username + ", You are our only chance to save the world from negativity.");
         $("#homeButton").on('click', renderHome);
 
         $("#beginButton").on('click', function() {
+            love = 0;
             $(".wrapper").empty();
             $(".wrapper").append($battle);
+            $(".arena").children('p').text('');
             $('#user-image').attr('src', imgSrc);
             $('#computer-icon').attr('src', 'assets/images/earth.png');
             $('#go_button').on('click', function() {
                 var playerIndex = player.getIndex();
                 var earthIndex = earth.getIndex();
                 love += player.actions[playerIndex].pointVal + earth.actions[earthIndex].pointVal;
-                console.log(love);
+                $('.arena').children('p').text(player.actions[playerIndex].str + " but " + earth.actions[earthIndex].str).append("You received " + (player.actions[playerIndex].pointVal + earth.actions[earthIndex].pointVal) + " points").append($scoreboard);
+                $scoreboard.text(love);
+
                 if (love >= 10 || love <= -10) {
                     $(".wrapper").empty();
                     $(".wrapper").append($result);
@@ -75,6 +86,7 @@ function renderHome() {
 
 
         });
+      }
     });
 }
 
