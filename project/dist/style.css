@@ -29,11 +29,8 @@ header h2 {
   display: inline-block;
   width: 40%; }
 
-.easy img {
-  width: 60%; }
-
-.hard img {
-  width: 58%; }
+.user img {
+  width: 285px; }
 
 .easy p {
   position: relative;
@@ -77,5 +74,33 @@ header h2 {
   padding: 9px 30px;
   font-size: 2.3rem;
   margin-left: 8%; }
+
+.battle h1 {
+  color: #FE5AED;
+  font-size: 5rem;
+  text-align: center; }
+
+.battle .user {
+  display: inline-block;
+  width: 40%;
+  margin-left: 5%;
+  position: relative;
+  bottom: 20vh; }
+
+.computer img {
+  display: inline-block;
+  width: 285px;
+  float: right;
+  position: relative;
+  bottom: 148vh;
+  margin-right: 3%; }
+
+.battle_icon_user {
+  position: relative;
+  bottom: 49vh;
+  display: inline-block; }
+
+.battle_icon_user .img {
+  width: 8%; }
 
 /*# sourceMappingURL=style.css.map */
