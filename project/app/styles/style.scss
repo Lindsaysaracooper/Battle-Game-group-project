@@ -35,6 +35,9 @@ header h2{
   display: inline-block;
   width:40%;
 }
+#user-icons img{
+  width: 30%;
+}
 
 .user img {
   width: 285px;
@@ -101,12 +104,24 @@ margin-left: 8%;
 }
 
 
-.battle .user{
+.user{
   display: inline-block;
-      width: 40%;
-      margin-left: 5%;
-      position: relative;
-      bottom: 20vh;
+  width: 30%;
+  position: relative;
+  bottom: 20vh;
+  float: left;
+}
+
+.computer {
+  display: inline-block;
+  width: 30%;
+  float: left;
+}
+
+.arena {
+  width: 30%;
+  display: inline-block;
+  float: left;
 }
 
 .computer img{
@@ -114,16 +129,9 @@ margin-left: 8%;
   width: 285px;
   float: right;
   position: relative;
-  bottom: 148vh;
   margin-right: 3%;
 }
 
 .battle_icon_user{
-  position: relative;
-    bottom: 49vh;
     display: inline-block;
-}
-
-.battle_icon_user .img{
-  width: 8%;
 }
