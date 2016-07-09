@@ -11,6 +11,7 @@ var $scoreboard = $("<div class='scoreboard'></div>");
 var username;
 var player;
 var love = 0;
+var endGame;
 
 function PlayerConstructor(points1, message1, points2, message2, points3, message3) {
     this.actions = [{
@@ -54,6 +55,7 @@ function renderHome() {
         } else {
         $(".wrapper").empty();
         $(".wrapper").append($welcome);
+        $('html, body').animate({ scrollTop: 0 }, 0);
         $("#namePrompt").text("Greetings " + username + ", You are our only chance to save the world from negativity.");
         $("#homeButton").on('click', renderHome);
 
@@ -61,6 +63,7 @@ function renderHome() {
             love = 0;
             $(".wrapper").empty();
             $(".wrapper").append($battle);
+            $('html, body').animate({ scrollTop: 0 }, 0);
             $(".arena").children('p').text('');
             $('#user-image').attr('src', imgSrc);
             $('#computer-icon').attr('src', 'assets/images/earth.png');
@@ -74,6 +77,7 @@ function renderHome() {
                 if (love >= 10 || love <= -10) {
                     $(".wrapper").empty();
                     $(".wrapper").append($result);
+                    $('html, body').animate({ scrollTop: 0 }, 0);
                     if (love > 0) {
                         $('h1').text('You won!');
                     } else {
