@@ -20,15 +20,17 @@ header h2 {
   text-align: center; }
 
 .characters_select {
-  margin-left: 30%; }
+  width: 60%;
+  text-align: center;
+  margin: 0 auto; }
 
 .easy {
   display: inline-block;
-  width: 40%; }
+  width: 50%; }
 
 .hard {
   display: inline-block;
-  width: 40%; }
+  width: 50%; }
 
 #user-icons img, #computer_icons_all img {
   width: 27%;
@@ -40,16 +42,16 @@ header h2 {
   width: 270px; }
 
 .easy p {
-  position: relative;
-  bottom: 47vh;
-  right: 106%;
+  position: absolute;
+  bottom: 66vh;
+  right: 79%;
   font-size: 1.3rem;
   display: inline; }
 
 .hard p {
-  position: relative;
-  bottom: 47vh;
-  left: 16%;
+  position: absolute;
+  bottom: 66vh;
+  right: 10%;
   font-size: 1.3rem;
   display: inline; }
 
@@ -82,6 +84,9 @@ header h2 {
   font-size: 2.3rem;
   margin-left: 8%; }
 
+.battle {
+  height: 550px; }
+
 .battle h1 {
   color: #FE5AED;
   font-size: 5rem;
@@ -89,47 +94,52 @@ header h2 {
 
 .battle .user {
   display: inline-block;
-  width: 30%;
-  position: relative;
-  bottom: 16vh;
+  width: 32%;
   float: left;
   margin-left: 2%; }
 
 .battle .computer {
   display: inline-block;
-  width: 29%;
+  width: 32%;
   float: left;
-  position: relative;
-  bottom: 9vh; }
+  margin-right: 2%; }
+
+.computer::after {
+  content: '';
+  clear: both;
+  display: block; }
 
 .arena {
-  width: 30%;
+  width: 32%;
   display: inline-block;
   float: left; }
 
 .computer img {
   display: inline-block;
-  width: 285px;
-  float: right;
-  position: relative;
+  width: 100%;
   margin-right: 3%; }
 
 .battle_icon_user {
-  display: inline-block; }
+  width: 30%;
+  display: inline-block;
+  margin-left: 2%; }
+
+.icon-container {
+  display: block; }
 
 #go_button {
   background-color: #FE5AED;
-  padding: 9px 30px;
-  font-size: 4.3rem;
-  margin-left: 8%;
-  position: relative;
-  bottom: 34vh;
-  left: 4%; }
+  width: 100px;
+  margin: 0 auto;
+  display: block;
+  font-size: 4.3rem; }
+  #go_button:focus {
+    outline: 0; }
 
 #computer_icons_all {
-  position: relative;
-  top: 14vh;
-  left: 13%; }
+  width: 30%;
+  float: right;
+  display: inline-block; }
 
 .end {
   width: 50%;
@@ -139,5 +149,28 @@ header h2 {
 #earth-image {
   width: 60%;
   margin: 0 auto; }
+
+#user-icons img.selected-icon {
+  border: 5px solid #FE5AED; }
+
+#computer_icons_all img.selected-icon {
+  border: 5px solid #FE5AED; }
+
+.scoreboard {
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+  color: #FE5AED;
+  font-size: 6rem;
+  text-align: center;
+  line-height: 6.5rem; }
+
+#homeButton.battle-page {
+  color: #000;
+  margin: 10px 0 1% 0;
+  padding: 5px;
+  font-size: 2rem;
+  background: transparent;
+  border: 0; }
 
 /*# sourceMappingURL=style.css.map */
