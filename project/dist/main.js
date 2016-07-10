@@ -38,13 +38,23 @@ function renderHome() {
 
     $("img").on('click', function() {
         var imgSrc;
+        var userImg1;
+        var userImg2;
+        var userImg3;
 
         if (this.alt === 'Easy_Character') {
             player = new PlayerConstructor(2, 'You hugged a stranger!', 4, 'You planted a tree!', 6, 'You lent an empathetic ear!');
             imgSrc = 'http://www.clipartbest.com/cliparts/dT8/ojg/dT8ojgLxc.png';
+            userImg1 = 'http://previews.123rf.com/images/lenm/lenm1204/lenm120400031/13131936-Illustration-of-a-Smiley-Offering-Hugs-and-Kisses-Stock-Illustration-kiss.jpg';
+            userImg2 = 'http://cliparting.com/wp-content/uploads/2016/05/Tree-clipart-2.png';
+            userImg3 = 'http://www.iconsplace.com/icons/preview/blue/listen-256.png';
+
         } else {
             player = new PlayerConstructor(2, 'You fed the hungry!', 3, 'You planned a 5k for local charity!', 4, 'You adopted an orphan!');
             imgSrc = 'http://img13.deviantart.net/cb85/i/2011/126/d/5/hippie_mom_by_ydocnameloc-d3frct2.png';
+            userImg1 = './assets/images/TGW_categoryicons_food_234.png';
+            userImg2 = './assets/images/running-man-xxl.png';
+            userImg3 = './assets/images/baby-xxl.png';
         }
         // render the easy character page
         username = prompt("Hello peace-maker. What is your name?");
@@ -69,6 +79,9 @@ function renderHome() {
             $('html, body').animate({ scrollTop: 0 }, 0);
             $(".arena").children('p').text('');
             $('#user-image').attr('src', imgSrc);
+            $("#user-icon-1").attr('src', userImg1);
+            $("#user-icon-2").attr('src', userImg2);
+            $("#user-icon-3").attr('src', userImg3);
             $('#computer-icon').attr('src', 'assets/images/earth.png');
             $('#go_button').on('click', function() {
                 var playerIndex = player.getIndex();
