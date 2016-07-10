@@ -1,138 +1,50 @@
-@import url("https://fonts.googleapis.com/css?family=Bangers");
-@import url("https://fonts.googleapis.com/css?family=Bangers|Pathway+Gothic+One|Quattrocento+Sans");
-@import url("hover-min.css");
-.wrapper {
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("http://cf067b.medialib.glogster.com/media/78/78a7c2f73b5427ebe08f25df587e79d7b9b2ff6bbc62867af29faafd7069ad64/0110-0902-1214-0208-bunch-cartoon-flowers-with-happy-faces.jpg");
-  background-size: cover;
-  height: 120vh;
-  width: 100%;
-  font-family: 'Bangers', cursive;
-  position: absolute; }
+/*
+Error: Invalid CSS after "...67e1469c813acd8": expected "{", was "}"
+        on line 219 of app/styles/style.scss
 
-header h1 {
-  color: #FE5AED;
-  font-size: 5rem;
-  text-align: center;
-  margin-bottom: -25px; }
+214:   padding: 5px;
+215:   font-size: 2rem;
+216:   background: transparent;
+217:   border: 0;
+218: >>>>>>> 2a57a16c4d55b1b753af0bc9367e1469c813acd8
+219: }
 
-header h2 {
-  font-size: 3rem;
-  text-align: center; }
-
-.characters_select {
-  margin-left: 30%; }
-
-.easy {
-  display: inline-block;
-  width: 40%; }
-
-.hard {
-  display: inline-block;
-  width: 40%; }
-
-#user-icons img, #computer_icons_all img {
-  width: 27%;
-  border: black solid 2px;
-  height: 13vh;
-  margin-right: 3%; }
-
-.user img {
-  width: 270px; }
-
-.easy p {
-  position: relative;
-  bottom: 47vh;
-  right: 106%;
-  font-size: 1.3rem;
-  display: inline; }
-
-.hard p {
-  position: relative;
-  bottom: 47vh;
-  left: 16%;
-  font-size: 1.3rem;
-  display: inline; }
-
-.hvr-grow:hover {
-  transform: scale(1.1); }
-
-.welcome h1 {
-  font-size: 3em;
-  text-align: center;
-  margin: 2vh 16%; }
-
-.welcome p {
-  font-size: 2.5rem;
-  text-align: center; }
-
-.welcome ol {
-  font-family: 'Pathway Gothic One', sans-serif;
-  margin: 0 28%;
-  font-size: 1.5rem; }
-
-#beginButton {
-  background-color: #FE5AED;
-  padding: 9px 30px;
-  font-size: 2.3rem;
-  margin-left: 31%; }
-
-#homeButton {
-  background-color: #FE5AED;
-  padding: 9px 30px;
-  font-size: 2.3rem;
-  margin-left: 8%; }
-
-.battle h1 {
-  color: #FE5AED;
-  font-size: 5rem;
-  text-align: center; }
-
-.battle .user {
-  display: inline-block;
-  width: 30%;
-  position: relative;
-  bottom: 16vh;
-  float: left;
-  margin-left: 2%; }
-
-.battle .computer {
-  display: inline-block;
-  width: 29%;
-  float: left;
-  position: relative;
-  bottom: 9vh; }
-
-.arena {
-  width: 30%;
-  display: inline-block;
-  float: left; }
-
-.computer img {
-  display: inline-block;
-  width: 285px;
-  float: right;
-  position: relative;
-  margin-right: 3%; }
-
-.battle_icon_user {
-  display: inline-block; }
-
-#go_button {
-  background-color: #FE5AED;
-  padding: 9px 30px;
-  font-size: 4.3rem;
-  margin-left: 8%;
-  position: relative;
-  bottom: 34vh;
-  left: 4%; }
-
-#computer_icons_all {
-  position: relative;
-  top: 14vh;
-  left: 13%; }
-
-.end h1 {
-  font-size: 10rem;
-  text-align: center; }
-
-/*# sourceMappingURL=style.css.map */
+Backtrace:
+app/styles/style.scss:219
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1120:in `tok!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:656:in `block'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:726:in `declaration_or_ruleset'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:726:in `declaration_or_ruleset'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:649:in `ruleset'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:675:in `block_child'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:125:in `stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:41:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...67e1469c813acd8\": expected \"{\", was \"}\"\A         on line 219 of app/styles/style.scss\A \A 214:   padding: 5px;\A 215:   font-size: 2rem;\A 216:   background: transparent;\A 217:   border: 0;\A 218: >>>>>>> 2a57a16c4d55b1b753af0bc9367e1469c813acd8\A 219: }"; }
